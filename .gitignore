@@ -1,0 +1,54 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+build/
+out/
+.tsup/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# env
+.env
+.env.*
+!.env.example
+
+# caches
+.cache/
+.turbo/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+apps/**/dist/
+apps/**/.vite/
+
+# Cypress artifacts
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# coverage
+coverage/
+.nyc_output/
+
+# editor/OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+.idea/
+.vscode/
+

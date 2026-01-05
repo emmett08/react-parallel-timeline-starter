@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch: {}
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - run: npm ci
+
+      - name: Build package
+        run: npm run build
+        working-directory: packages/react-parallel-timeline
+
+      - name: Publish to npmjs
+        run: npm publish --access public
+        working-directory: packages/react-parallel-timeline
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

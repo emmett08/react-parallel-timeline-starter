@@ -1,0 +1,28 @@
+{
+  "name": "react-parallel-timeline-starter",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "npm -ws run build",
+    "dev": "npm -w apps/demo run dev",
+    "preview": "npm -w apps/demo run preview",
+    "typecheck": "npm -ws run typecheck",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "e2e": "start-server-and-test dev http://localhost:5173 cypress:run"
+  },
+  "devDependencies": {
+    "cypress": "^15.8.1",
+    "start-server-and-test": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "qs": "6.14.1"
+  }
+}
