@@ -18,6 +18,7 @@
     "e2e": "start-server-and-test dev http://localhost:5173 cypress:run"
   },
   "devDependencies": {
+    "@types/node": "^20.19.27",
     "cypress": "^15.8.1",
     "start-server-and-test": "^2.0.0",
     "typescript": "^5.9.3"
