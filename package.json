@@ -13,8 +13,8 @@
     "dev": "npm -w apps/demo run dev",
     "preview": "npm -w apps/demo run preview",
     "typecheck": "npm -ws run typecheck",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
+    "cypress:open": "env -u ELECTRON_RUN_AS_NODE -u ELECTRON_NO_ATTACH_CONSOLE cypress open",
+    "cypress:run": "env -u ELECTRON_RUN_AS_NODE -u ELECTRON_NO_ATTACH_CONSOLE cypress run",
     "e2e": "start-server-and-test dev http://localhost:5173 cypress:run"
   },
   "devDependencies": {
